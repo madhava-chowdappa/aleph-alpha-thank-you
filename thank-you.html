@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thank You - Aleph Alpha</title>
+    <style>
+      :root {
+        --primary-blue: #002e6d; /* Aleph Alpha brand navy */
+        --accent-blue: #00a8e8; /* Aleph Alpha accent blue */
+      }
+
+      body {
+        font-family: "Inter", system-ui, -apple-system, sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #f8f9fa;
+      }
+
+      .thank-you-container {
+        max-width: 800px;
+        padding: 3rem;
+        text-align: center;
+        background: white;
+        border-radius: 16px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        margin: 2rem;
+      }
+
+      .checkmark {
+        width: 80px;
+        height: 80px;
+        margin: 0 auto 2rem;
+        background-color: var(--primary-blue);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .checkmark svg {
+        width: 40px;
+        height: 40px;
+        fill: white;
+      }
+
+      h1 {
+        color: var(--primary-blue);
+        font-size: 2.5rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .content {
+        color: #495057;
+        font-size: 1.1rem;
+        margin-bottom: 2rem;
+      }
+
+      .next-steps {
+        background: rgba(0, 46, 109, 0.05);
+        padding: 2rem;
+        border-radius: 12px;
+        margin: 2rem 0;
+        border: 1px solid rgba(0, 46, 109, 0.1);
+      }
+
+      .links-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1.5rem;
+        max-width: 600px;
+        margin: 0 auto;
+      }
+
+      .resource-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 1.5rem;
+        background: white;
+        border-radius: 8px;
+        text-decoration: none;
+        transition: all 0.2s ease;
+        border: 1px solid rgba(0, 46, 109, 0.1);
+        color: var(--primary-blue);
+      }
+
+      .resource-card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(0, 46, 109, 0.1);
+        border-color: var(--accent-blue);
+      }
+
+      .link-icon {
+        width: 32px;
+        height: 32px;
+        margin-bottom: 1rem;
+        stroke: var(--accent-blue);
+      }
+
+      .resource-card span {
+        font-weight: 500;
+        text-align: center;
+        line-height: 1.4;
+      }
+
+      .back-button {
+        display: inline-flex;
+        align-items: center;
+        color: var(--primary-blue);
+        text-decoration: none;
+        font-weight: 500;
+        gap: 8px;
+        transition: color 0.3s ease;
+        margin-top: 2rem;
+      }
+
+      .back-button:hover {
+        color: var(--accent-blue);
+      }
+
+      @media (max-width: 480px) {
+        .links-container {
+          grid-template-columns: 1fr;
+        }
+
+        .resource-card {
+          padding: 1rem;
+        }
+
+        .thank-you-container {
+          padding: 2rem;
+          margin: 1rem;
+        }
+
+        h1 {
+          font-size: 2rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="thank-you-container">
+      <div class="checkmark">
+        <svg viewBox="0 0 24 24">
+          <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+        </svg>
+      </div>
+
+      <h1>Thank you for contacting Aleph Alpha</h1>
+
+      <div class="content">
+        <p>
+          We've received your inquiry and our team will respond within 24
+          business hours.
+        </p>
+      </div>
+
+      <div class="next-steps">
+        <h3>Explore More</h3>
+        <div class="links-container">
+          <a href="https://aleph-alpha.com/phariaai/" class="resource-card">
+            <svg
+              class="link-icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+              />
+            </svg>
+            <span>PhariaAI Solutions</span>
+          </a>
+
+          <a href="https://aleph-alpha.com/technology/" class="resource-card">
+            <svg
+              class="link-icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M13 10V3L4 14h7v7l9-11h-7z"
+              />
+            </svg>
+            <span>Core Technology</span>
+          </a>
+
+          <a href="https://aleph-alpha.com/news/" class="resource-card">
+            <svg
+              class="link-icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"
+              />
+            </svg>
+            <span>Latest News</span>
+          </a>
+        </div>
+      </div>
+
+      <a href="https://aleph-alpha.com" class="back-button">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          viewBox="0 0 24 24"
+          fill="currentColor"
+        >
+          <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20z" />
+        </svg>
+        Return to Homepage
+      </a>
+    </div>
+  </body>
+</html>
