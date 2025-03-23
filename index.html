@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aleph Alpha - Contact</title>
+    <style>
+      :root {
+        --primary-color: #002e6d; /* Aleph Alpha's brand blue */
+        --secondary-color: #00a8e8; /* Accent blue */
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 4rem auto;
+        padding: 0 20px;
+      }
+
+      .solutions-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+        margin-top: 40px;
+      }
+
+      .solution-card {
+        padding: 40px;
+        border-radius: 12px;
+        background: #f8f9fa;
+        transition: transform 0.3s ease;
+        border: 1px solid #e9ecef;
+      }
+
+      .solution-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      }
+
+      .solution-title {
+        color: var(--primary-color);
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+      }
+
+      .solution-subtitle {
+        font-size: 2.5rem;
+        color: #212529;
+        margin-bottom: 1.5rem;
+        font-weight: 600;
+      }
+
+      .solution-description {
+        font-size: 1.1rem;
+        color: #495057;
+        line-height: 1.6;
+        margin-bottom: 2rem;
+      }
+
+      .cta-button {
+        display: inline-block;
+        padding: 12px 30px;
+        background-color: var(--primary-color);
+        color: white;
+        text-decoration: none;
+        border-radius: 25px;
+        transition: background-color 0.3s ease;
+        font-weight: 500;
+      }
+
+      .cta-button:hover {
+        background-color: var(--secondary-color);
+      }
+
+      .form-container {
+        display: none; /* Hidden by default */
+        margin-top: 2rem;
+      }
+
+      .form-container.active {
+        display: block; /* Show when active */
+      }
+
+      label {
+        display: block;
+        margin-bottom: 0.5rem;
+        color: var(--primary-color);
+        font-weight: 500;
+      }
+
+      input[type="text"],
+      input[type="email"] {
+        width: 100%;
+        padding: 0.75rem;
+        margin-bottom: 1.5rem;
+        border: 1px solid #ced4da;
+        border-radius: 8px;
+        font-size: 1rem;
+        transition: border-color 0.3s ease;
+      }
+
+      input[type="text"]:focus,
+      input[type="email"]:focus {
+        border-color: var(--secondary-color);
+        outline: none;
+      }
+
+      input[type="submit"] {
+        width: 100%;
+        padding: 0.75rem;
+        background-color: var(--primary-color);
+        color: white;
+        border: none;
+        border-radius: 8px;
+        font-size: 1rem;
+        font-weight: 500;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      input[type="submit"]:hover {
+        background-color: var(--secondary-color);
+      }
+
+      @media (max-width: 768px) {
+        .solutions-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .solution-subtitle {
+          font-size: 2rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="solutions-grid">
+        <!-- Government Section -->
+        <div class="solution-card">
+          <div class="solution-title">For Government</div>
+          <h2 class="solution-subtitle">
+            Secure AI Solutions for Public Sector Innovation
+          </h2>
+          <p class="solution-description">
+            Empower your government organization with cutting-edge AI
+            technology. Enhance public services, ensure data sovereignty, and
+            drive innovation with our secure, explainable AI solutions.
+          </p>
+          <button class="cta-button" onclick="showForm('b2g')">
+            Contact Government Solutions
+          </button>
+
+          <!-- B2G Salesforce Form -->
+          <div id="b2g-form" class="form-container">
+            <form
+              action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00DQy00000Mg1ws"
+              method="POST"
+            >
+              <input type="hidden" name="oid" value="00DQy00000Mg1ws" />
+              <input type="hidden" name="retURL" value="thank-you.html" />
+              <input type="hidden" name="lead_type" value="B2G" />
+
+              <label for="first_name">First Name</label>
+              <input type="text" id="first_name" name="first_name" required />
+
+              <label for="last_name">Last Name</label>
+              <input type="text" id="last_name" name="last_name" required />
+
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required />
+
+              <label for="company">Government Agency</label>
+              <input type="text" id="company" name="company" required />
+
+              <label for="city">City</label>
+              <input type="text" id="city" name="city" />
+
+              <label for="state">State/Province</label>
+              <input type="text" id="state" name="state" />
+
+              <input type="submit" name="submit" value="Submit" />
+            </form>
+          </div>
+        </div>
+
+        <!-- Enterprise Section -->
+        <div class="solution-card">
+          <div class="solution-title">For Enterprises</div>
+          <h2 class="solution-subtitle">
+            Transform Your Business with Trusted AI
+          </h2>
+          <p class="solution-description">
+            Leverage Aleph Alpha's enterprise-grade AI to optimize operations,
+            enhance decision-making, and maintain full data control.
+            Future-proof your business with explainable AI solutions.
+          </p>
+          <button class="cta-button" onclick="showForm('b2b')">
+            Contact Enterprise Solutions
+          </button>
+
+          <!-- B2B Salesforce Form -->
+          <div id="b2b-form" class="form-container">
+            <form
+              action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00DQy00000Mg1ws"
+              method="POST"
+            >
+              <input type="hidden" name="oid" value="00DQy00000Mg1ws" />
+              <input type="hidden" name="retURL" value="thank-you.html" />
+              <input type="hidden" name="lead_type" value="B2B" />
+
+              <label for="first_name">First Name</label>
+              <input type="text" id="first_name" name="first_name" required />
+
+              <label for="last_name">Last Name</label>
+              <input type="text" id="last_name" name="last_name" required />
+
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required />
+
+              <label for="company">Company Name</label>
+              <input type="text" id="company" name="company" required />
+
+              <label for="city">City</label>
+              <input type="text" id="city" name="city" />
+
+              <label for="state">State/Province</label>
+              <input type="text" id="state" name="state" />
+
+              <input type="submit" name="submit" value="Submit" />
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function showForm(formType) {
+        // Hide all forms
+        document.querySelectorAll(".form-container").forEach((form) => {
+          form.classList.remove("active");
+        });
+
+        // Show the selected form
+        if (formType === "b2g") {
+          document.getElementById("b2g-form").classList.add("active");
+        } else if (formType === "b2b") {
+          document.getElementById("b2b-form").classList.add("active");
+        }
+      }
+    </script>
+  </body>
+</html>
